@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("HelloWorld")
 public class HelloWorldController {
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "getHello",method = RequestMethod.GET)
     public String getHello(ModelMap model){
         model.addAttribute("display","Hello World");
         return "helloWorld";

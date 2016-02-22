@@ -20,7 +20,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="E:\Develop\Java\TestSpringMvc\target/MANIFEST.MF" />
+        <element id="file-copy" path="E:\GitHub\TestMVC\trunk\TestSpringMvc\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="TestSpringMvc/web/Web" />
     </root>
