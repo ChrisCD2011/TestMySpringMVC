@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,7 +22,7 @@ import java.util.Map;
 public class HelloController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
+		model.addAttribute("message", "你好");
 		return "hello";
 	}
 
@@ -44,9 +47,10 @@ public class HelloController {
 		return "show";
 	}
 
-	@RequestMapping("/getPerson")
-	public void getPerson(String name, PrintWriter pw) {
-		pw.write("hello," + name);
+	@RequestMapping(value = "/getPerson", method = RequestMethod.POST)
+	public void getPerson(String name, PrintWriter pw) throws Exception{
+		String str = "你好," + name;
+		pw.write(str);
 	}
 
 	@RequestMapping("/name")
