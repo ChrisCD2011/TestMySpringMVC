@@ -2,7 +2,7 @@
 <%@include file="common/load.jsp"%>
 <html>
 <head>
-	<script type="text/javascript" src="${basePath}/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="${basePath}/myScripts/jquery.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>测试主页</title>
 	<script type="text/javascript">
